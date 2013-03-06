@@ -63,6 +63,7 @@ Since XMLHTTPRequest 2.0 it's possible to send files alongside post data through
 <form 
 	action="/path/to/action/"
 	method="post"
+	enctype="multipart/form-data"
 	data-ajax="true"
 	data-success="mySuccessFunction"
 	data-error="myErrorFunction"
@@ -106,6 +107,7 @@ Validation is a very important part when designing forms. This plugin supports v
 <form 
 	action="/path/to/action/"
 	method="post"
+	enctype="multipart/form-data"
 	data-ajax="true"
 	data-success="mySuccessFunction"
 	data-error="myErrorFunction"
