@@ -3,7 +3,7 @@ JAM! AJAX FORM HELPER
 
 ## Description
 
-Jam! Ajax Form Helper is a simple plugin for jQuery that allows you to ajaxify a form by using (almost) only markup. It takes care of setting things up so that the form is submitted to the server using AJAX, and an event is fired when the server replies (with an error or a success message). It will also report back the progress status, so that you can use some kind of indicator to give feedback to the user.
+Jam! Ajax Form Helper is a simple plugin for jQuery that allows you to ajaxify a form in an almost codeless way. It takes care of setting things up so that the form is submitted to the server using AJAX, and an event is fired when the server replies (with an error or a success message). It will also report back the progress status, so that you can use some kind of indicator to give feedback to the user, and supports file upload as well (single and multiple).
 
 Tested working on: Safari 6, Firefox 19, Chrome 25, IE 10, Mobile Safari (iPad with iOS 6.1.2) 
 Does not work on: IE 6,7,8 and 9.
@@ -12,7 +12,7 @@ Please note: a live example will be posted as soon as my website is online. It s
 
 ## Requirements
 
-This plugin requires, of course, the jQuery library. Version 1.9 is a safe bet, I haven't tested it with 1.8.x but it *might* work. It also requires the doctype of the document to be HTML5 compliant, since data attributes are used quite extensively. 
+This plugin requires at least jQuery 1.9. I have not tested it with 2.0 and I've not been successful with 1.8.3 but I might get results with a little fiddling. It also requires the doctype of the document to be HTML5 compliant, since data attributes are used quite extensively. 
 
 ## How to use it!
 
@@ -97,7 +97,7 @@ function myBeforeSendFunction() {
 }
 ```
 
-The server will receive a perfectly standard post request. If you're using PHP as I do, your $_POST array is going to be populated with the values of the various inputs, and the $_FILES array is going to contain the uploaded files. The plugin supports both single and multiple file uploading, and can handle as many file inputs as you want.
+The server will receive a perfectly standard post request. If you're using PHP as I do, your $_POST array is going to be populated with the values of the various inputs, and the $_FILES array is going to contain the uploaded files. The plugin supports both single and multiple file uploading, and can handle as many file inputs as you want. If you want to add a button to cancel the upload while it's in progress, you can do so by using the data-role="abort" in a button or input. The abort event will call the error function, you can check the response status to determine whether the error was due to an user triggered event or something else.
 
 ### Validation
 
@@ -229,10 +229,10 @@ The `options` parameter is a JSON object that can contain the following data:
 		<td>progress</td><td>The pointer to the function called when the request's status is updated</td><td>Empty function</td>
 	</tr>
 	<tr>
-		<td>validationFailed</td><td>The pointer to the function called when validation fails</td><td>Empty Function</td>
+		<td>validationFailed</td><td>The pointer to the function called when validation fails</td><td>Empty function</td>
 	</tr>
 	<tr>
-		<td>validationSuccess</td><td>The pointer to the function called when validation succeeds</td><td>Empty Function</td>
+		<td>validationSuccess</td><td>The pointer to the function called when validation succeeds</td><td>Empty function</td>
 	</tr>
 	<tr>
 		<td>validationFields</td><td>A JSON object containing a pointer to each field's validation function (where present) and the the field itself</td><td>Empty Object</td>
