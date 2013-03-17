@@ -8,7 +8,7 @@ Jam! Ajax Form Helper is a simple plugin for jQuery that allows you to ajaxify a
 Tested working on: Safari 6, Firefox 19, Chrome 25, IE 10, Mobile Safari (iPad with iOS 6.1.2) 
 Does not work on: IE 6,7,8 and 9.
 
-Please note: a live example will be posted as soon as my website is online. It should not be long now!
+You can find a live, working example on my website, here: http://www.gianmarcotoso.com/projects/jam-ajax-form-helper/
 
 ## Requirements
 
